@@ -71,7 +71,6 @@ public class WarehouseState extends State implements Cloneable {
     public void moveUp() {
         if(canMoveUp()){
             this.steps++;
-            System.out.println("Up "+ lineAgent+","+columnAgent);
             setCellAgent(lineAgent-1, columnAgent);
         }
     }
@@ -79,7 +78,6 @@ public class WarehouseState extends State implements Cloneable {
     public void moveRight() {
         if(canMoveRight()){
             this.steps++;
-            System.out.println("Right "+ lineAgent+","+columnAgent);
             setCellAgent(lineAgent, columnAgent+1);
         }
     }
@@ -87,7 +85,6 @@ public class WarehouseState extends State implements Cloneable {
     public void moveDown() {
         if(canMoveDown()){
             this.steps++;
-            System.out.println("Down "+ lineAgent+","+columnAgent);
             setCellAgent(lineAgent+1, columnAgent);
         }
     }
@@ -95,12 +92,12 @@ public class WarehouseState extends State implements Cloneable {
     public void moveLeft() {
         if(canMoveLeft()){
             this.steps++;
-            System.out.println("Left "+ lineAgent+","+columnAgent);
             setCellAgent(lineAgent, columnAgent-1);
         }
     }
 
     public void setCellAgent(int line, int column) {
+        System.out.println("Move to: "+ line+","+column);
         this.matrix[lineAgent][columnAgent] = Properties.EMPTY;
         this.matrix[line][column] = Properties.AGENT;
         this.lineAgent = line;

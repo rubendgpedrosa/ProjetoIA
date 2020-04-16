@@ -6,7 +6,92 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac04bfec-7f60-42eb-9fae-b904b9702de2" name="Default" comment="" />
+    <list default="true" id="ac04bfec-7f60-42eb-9fae-b904b9702de2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/META-INF/ProjWarehouse.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Agent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Heuristic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Heuristic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Problem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Problem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/agentSearch/State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/Experiment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/Experiment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/ExperimentEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/ExperimentEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/ExperimentListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/ExperimentListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/ExperimentsFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/ExperimentsFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/Parameter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/experiments/Parameter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/GAEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/GAEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/GAListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/GAListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/GeneticAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/GeneticAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/Individual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/IntVectorIndividual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/IntVectorIndividual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/Population.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/Problem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/Problem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/GeneticOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/GeneticOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Mutation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Mutation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Mutation2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Mutation2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Mutation3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Mutation3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/MutationInsert.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/MutationInsert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Recombination.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Recombination.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Recombination2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Recombination2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Recombination3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/Recombination3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/RecombinationPartialMapped.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/geneticOperators/RecombinationPartialMapped.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/selectionMethods/SelectionMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/selectionMethods/SelectionMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/selectionMethods/Tournament.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/ga/selectionMethods/Tournament.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonDataSet_actionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonDataSet_actionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonExperiments_actionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonExperiments_actionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonRunExperiments_actionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonRunExperiments_actionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonRunGA_actionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonRunGA_actionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonRunSearch1_actionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonRunSearch1_actionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonRunSearch2_actionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonRunSearch2_actionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonStop_actionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/ButtonStop_actionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/IntegerTextField_KeyAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/IntegerTextField_KeyAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/JComboBoxSearch_ActionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/JComboBoxSearch_ActionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/JComboBoxSelectionMethods_ActionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/JComboBoxSelectionMethods_ActionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelAtributesValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelAtributesValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelInformation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelParameters.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelParameters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelSimulation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelTextArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/PanelTextArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/SimulationPanel_buttonSimulate_actionAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/gui/SimulationPanel_buttonSimulate_actionAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/AStarSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/AStarSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/GraphSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/GraphSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/InformedSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/InformedSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/SearchMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/SearchMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/search/Statistics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/search/Statistics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestAverage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestAverage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestInRun.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/statisticsGA/StatisticBestInRun.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/FileOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/FileOperations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/Maths.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/Maths.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/NodeCollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/NodeCollection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/NodePriorityQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/utils/NodePriorityQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/ActionDown.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/ActionDown.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/ActionLeft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/ActionLeft.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/ActionRight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/ActionRight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/ActionUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/ActionUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Cell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/EnvironmentListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/EnvironmentListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/HeuristicWarehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/HeuristicWarehouse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Pair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Properties.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Properties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseAgentSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseAgentSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseExperimentsFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseExperimentsFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseIndividual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseIndividual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseProblemForGA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseProblemForGA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseProblemForSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseProblemForSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjWarehouse/warehouse/WarehouseState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warehouse/HeuristicWarehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehouse/HeuristicWarehouse.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,6 +232,8 @@
       <workItem from="1554908756461" duration="972000" />
       <workItem from="1555072025164" duration="72000" />
       <workItem from="1587046084338" duration="17000" />
+      <workItem from="1587046864265" duration="24000" />
+      <workItem from="1587046986132" duration="110000" />
     </task>
     <servers />
   </component>
@@ -162,6 +249,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="801" y="432" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587046172040" />
+    <state width="1872" height="286" key="GridCell.Tab.0.bottom" timestamp="1587047095890">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587047095890" />
+    <state width="1872" height="286" key="GridCell.Tab.0.center" timestamp="1587047095890">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="286" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587047095890" />
+    <state width="1872" height="286" key="GridCell.Tab.0.left" timestamp="1587047095889">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="286" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587047095889" />
+    <state width="1872" height="286" key="GridCell.Tab.0.right" timestamp="1587047095890">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="286" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587047095890" />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />
