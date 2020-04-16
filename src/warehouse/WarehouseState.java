@@ -13,73 +13,98 @@ public class WarehouseState extends State implements Cloneable {
 
     private int[][] matrix;
     private int lineAgent, columnAgent;
-    private int lineExit;
-    private int columnExit;
     private int steps;
 
+    //https://www.youtube.com/watch?v=nXv28fd46wM  THE DOOR!
+    private int theDoorLine;
+    private int theDoorColumn;
+
     public WarehouseState(int[][] matrix) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        this.matrix = new int[matrix.length][matrix.length];
+
+        for (int i = 1; i < getSize(); i++) {
+            for (int j = 0; j < getSize(); j++) {
+                this.matrix[i][j] = matrix[i][j];
+                if (this.matrix[i][j] == Properties.AGENT) {
+                    this.lineAgent = this.theDoorLine = i;
+                    this.columnAgent = this.theDoorColumn = j;
+                }
+            }
+        }
+        this.steps = 0;
+    }
+
+    public WarehouseState(int[][] matrix, int lineAgent, int columnAgent, int theDoorLine, int theDoorColumn, int steps) {
+        this.matrix = matrix;
+        this.lineAgent = lineAgent;
+        this.columnAgent = columnAgent;
+        this.steps = steps;
+        this.theDoorLine = theDoorLine;
+        this.theDoorColumn = theDoorColumn;
     }
 
     public void executeAction(Action action) {
         action.execute(this);
-        // TODO
-        throw new UnsupportedOperationException("Not implemented yet."); // delete after implementing
     }
 
     public void executeActionSimulation(Action action) {
         action.execute(this);
-        // TODO
-
         fireUpdatedEnvironment();
-        throw new UnsupportedOperationException("Not implemented yet."); // delete after implementing
     }
 
-
     public boolean canMoveUp() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        return lineAgent > 0;
     }
 
     public boolean canMoveRight() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        return columnAgent < getSize()-1;
     }
 
     public boolean canMoveDown() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        return lineAgent < getSize()-1;
     }
 
     public boolean canMoveLeft() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        return columnAgent > 0;
     }
 
     public void moveUp() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        if(canMoveUp()){
+            this.steps++;
+            System.out.println("Up "+ lineAgent+","+columnAgent);
+            setCellAgent(lineAgent-1, columnAgent);
+        }
     }
 
     public void moveRight() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        if(canMoveRight()){
+            this.steps++;
+            System.out.println("Right "+ lineAgent+","+columnAgent);
+            setCellAgent(lineAgent, columnAgent+1);
+        }
     }
 
     public void moveDown() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        if(canMoveDown()){
+            this.steps++;
+            System.out.println("Down "+ lineAgent+","+columnAgent);
+            setCellAgent(lineAgent+1, columnAgent);
+        }
     }
 
     public void moveLeft() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        if(canMoveLeft()){
+            this.steps++;
+            System.out.println("Left "+ lineAgent+","+columnAgent);
+            setCellAgent(lineAgent, columnAgent-1);
+        }
     }
 
     public void setCellAgent(int line, int column) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        this.matrix[lineAgent][columnAgent] = Properties.EMPTY;
+        this.matrix[line][column] = Properties.AGENT;
+        this.lineAgent = line;
+        this.columnAgent = column;
     }
 
     public int getSteps() {
@@ -99,7 +124,7 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public Color getCellColor(int line, int column) {
-        if (line == lineExit && column == columnExit && (line != lineAgent || column != columnAgent))
+        if (line == theDoorLine && column == theDoorColumn && (line != lineAgent || column != columnAgent))
             return Properties.COLOREXIT;
 
         switch (matrix[line][column]) {
@@ -155,8 +180,7 @@ public class WarehouseState extends State implements Cloneable {
 
     @Override
     public WarehouseState clone() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        return new WarehouseState(this.matrix, this.lineAgent, this.columnAgent, this.theDoorLine, this.theDoorColumn, this.steps);
     }
 
     private final ArrayList<EnvironmentListener> listeners = new ArrayList<>();
@@ -175,6 +199,24 @@ public class WarehouseState extends State implements Cloneable {
         for (EnvironmentListener listener : listeners) {
             listener.environmentUpdated();
         }
+    }
+
+    public int computeDistanceManhattan() {
+        //Manhattan distance
+        int dx = Math.abs(this.lineAgent - this.theDoorLine);
+        int dy = Math.abs(this.columnAgent - this.theDoorColumn);
+
+        //Cost is not used since it's always 1
+        return (dx + dy);
+    }
+
+    public int computeDistanceChebyshev() {
+        //Chebyshev distance in our case, since D and D2 have a cost = 1
+        int dx = Math.abs(this.lineAgent - this.theDoorLine);
+        int dy = Math.abs(this.columnAgent - this.theDoorColumn);
+
+        //Cost is not used since it's always 1
+        return (dx + dy) + (1 - 2 * 1) * Math.min(dx, dy);
     }
 
 }
