@@ -8,9 +8,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class WarehouseState extends State implements Cloneable {
-
-    //TODO this class might require the definition of additional methods and/or attributes
-
     private int[][] matrix;
     private int lineAgent, columnAgent;
     private int steps;
@@ -35,7 +32,14 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public WarehouseState(int[][] matrix, int lineAgent, int columnAgent, int theDoorLine, int theDoorColumn, int steps) {
-        this.matrix = matrix;
+        this.matrix = new int[matrix.length][matrix.length];
+
+        for (int i = 1; i < getSize(); i++) {
+            for (int j = 0; j < getSize(); j++) {
+                this.matrix[i][j] = matrix[i][j];
+            }
+        }
+
         this.lineAgent = lineAgent;
         this.columnAgent = columnAgent;
         this.steps = steps;
@@ -142,6 +146,14 @@ public class WarehouseState extends State implements Cloneable {
         return columnAgent;
     }
 
+    public int getTheDoorLine() {
+      return theDoorLine;
+    }
+
+    public int getTheDoorColumn() {
+      return theDoorColumn;
+    }
+
     @Override
     public boolean equals(Object other) {
         if (!(other instanceof WarehouseState)) {
@@ -196,23 +208,5 @@ public class WarehouseState extends State implements Cloneable {
         for (EnvironmentListener listener : listeners) {
             listener.environmentUpdated();
         }
-    }
-
-    public int computeDistanceManhattan() {
-        //Manhattan distance
-        int dx = Math.abs(this.lineAgent - this.theDoorLine);
-        int dy = Math.abs(this.columnAgent - this.theDoorColumn);
-
-        //Cost is not used since it's always 1
-        return (dx + dy);
-    }
-
-    public int computeDistanceChebyshev() {
-        //Chebyshev distance in our case, since D and D2 have a cost = 1
-        int dx = Math.abs(this.lineAgent - this.theDoorLine);
-        int dy = Math.abs(this.columnAgent - this.theDoorColumn);
-
-        //Cost is not used since it's always 1
-        return (dx + dy) + (1 - 2 * 1) * Math.min(dx, dy);
     }
 }
