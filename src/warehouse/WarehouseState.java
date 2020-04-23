@@ -53,19 +53,19 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public boolean canMoveUp() {
-        return lineAgent > 0;
+        return lineAgent > 0 && matrix[lineAgent - 1][columnAgent] != Properties.SHELF;
     }
 
     public boolean canMoveRight() {
-        return columnAgent < getSize()-1;
+        return columnAgent < getSize() - 1 && matrix[lineAgent][columnAgent + 1] != Properties.SHELF;
     }
 
     public boolean canMoveDown() {
-        return lineAgent < getSize()-1;
+        return lineAgent < getSize() - 1 && matrix[lineAgent + 1][columnAgent] != Properties.SHELF;
     }
 
     public boolean canMoveLeft() {
-        return columnAgent > 0;
+        return columnAgent > 0 && matrix[lineAgent][columnAgent - 1] != Properties.SHELF;
     }
 
     public void moveUp() {
@@ -215,5 +215,4 @@ public class WarehouseState extends State implements Cloneable {
         //Cost is not used since it's always 1
         return (dx + dy) + (1 - 2 * 1) * Math.min(dx, dy);
     }
-
 }

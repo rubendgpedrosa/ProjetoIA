@@ -5,8 +5,9 @@ import agentSearch.Heuristic;
 public class HeuristicWarehouse extends Heuristic<WarehouseProblemForSearch, WarehouseState> {
     @Override
     public double compute(WarehouseState state){
-        return state.computeDistanceChebyshev();
-        //return state.computeDistanceManhattan();
+        //return state.computeDistanceChebyshev();
+        return state.computeDistanceManhattan();
+        
     }
 
     @Override

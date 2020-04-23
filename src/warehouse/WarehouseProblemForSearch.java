@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem<S> {
+    private int[][] matrix;
     private Cell goalState;
     private final ArrayList<Action> availableActions;
 
@@ -22,6 +23,8 @@ public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem
         availableActions.add(new ActionRight());
         availableActions.add(new ActionDown());
         availableActions.add(new ActionLeft());
+
+        matrix = initialWarehouseState.getMatrix();
     }
 
     @Override
@@ -41,6 +44,11 @@ public class WarehouseProblemForSearch<S extends WarehouseState> extends Problem
     }
 
     public boolean isGoal(S state) {
-        return state.getLineAgent() == goalState.getLine() && state.getColumnAgent() == goalState.getColumn();
+        if (matrix[goalState.getLine()][goalState.getColumn()] == Properties.SHELF) {
+            return state.getLineAgent() == goalState.getLine() && state.getColumnAgent() == goalState.getColumn() + 1;
+        }
+        else{
+            return state.getLineAgent() == goalState.getLine() && state.getColumnAgent() == goalState.getColumn();
+        }
     }
 }
