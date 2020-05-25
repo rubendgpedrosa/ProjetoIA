@@ -7,7 +7,7 @@ import ga.Problem;
 import static ga.GeneticAlgorithm.random;
 
 public abstract class Mutation <I extends Individual, P extends Problem<I>> extends GeneticOperator{
-    
+
     public Mutation(double probability){
         super(probability);
     }

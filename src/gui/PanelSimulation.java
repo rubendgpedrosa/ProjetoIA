@@ -131,7 +131,7 @@ public class PanelSimulation extends JPanel implements EnvironmentListener {
                         hasProduct = true;
                         g.setColor(Properties.COLORSHELFPRODUCT);
                         g.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
-                        g.setColor(Color.BLACK);
+                        g.setColor(Color.BLUE);
                         g.drawString(Integer.toString(product), x * CELL_SIZE + 2, y * CELL_SIZE + CELL_SIZE - 2);
                     }
                 }
