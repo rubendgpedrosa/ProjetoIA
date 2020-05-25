@@ -96,7 +96,7 @@ public class WarehouseAgentSearch<S extends State> extends Agent<S> {
         return shelves;
     }
 
-    public LinkedList<Pair> getPairs() {
+    public static LinkedList<Pair> getPairs() {
         return pairs;
     }
 
