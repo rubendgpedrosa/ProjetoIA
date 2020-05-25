@@ -6,23 +6,48 @@ import java.util.LinkedList;
 
 public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
 
-    //TODO this class might require the definition of additional methods and/or attributes
+    private LinkedList<Cell> cellsWarehouseProducts;
+    private LinkedList<Pair> pairs;
+    private Cell cellAgent;
+    private Cell theDoor;
 
     public WarehouseProblemForGA(WarehouseAgentSearch agentSearch) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        this.cellAgent = this.theDoor = WarehouseAgentSearch.getCellAgent();
+        this.cellsWarehouseProducts = WarehouseAgentSearch.getShelves();
+        this.pairs = agentSearch.getPairs();
     }
 
     @Override
     public WarehouseIndividual getNewIndividual() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        return new WarehouseIndividual(this, this.cellsWarehouseProducts.size());
     }
 
     @Override
     public String toString() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        StringBuilder sb = new StringBuilder();
+        for (Pair pair : pairs) {
+            sb.append(pair.toString());
+        }
+        return sb.toString();
     }
 
+    public LinkedList<Cell> getCellsWarehouseProducts() {
+        return cellsWarehouseProducts;
+    }
+
+    public LinkedList<Pair> getPairs() {
+        return pairs;
+    }
+
+    public Cell getCellAgent() {
+        return cellAgent;
+    }
+
+    public Cell getTheDoor() {
+        return theDoor;
+    }
+
+    public int getDistanceBetweenCells(Cell init, Cell end) {
+        return Math.max(Math.abs(end.getColumn() - init.getColumn()), Math.abs(end.getLine() - init.getLine()));
+    }
 }

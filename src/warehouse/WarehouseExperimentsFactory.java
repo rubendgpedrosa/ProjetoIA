@@ -51,10 +51,10 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
             case "pmx":
                 recombination = new RecombinationPartialMapped<>(recombinationProbability);
                 break;
-            case "TODO1": //TODO
+            case "order1":
                 recombination = new RecombinationOrder1<>(recombinationProbability);
                 break;
-            case "TODO2": //TODO
+            case "cycle":
                 recombination = new RecombinationCycle<>(recombinationProbability);
                 break;
         }
@@ -65,10 +65,10 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
             case "insert":
                 mutation = new MutationInsert<>(mutationProbability);
                 break;
-            case "TODO1": //TODO
+            case "switchandshift":
                 mutation = new MutationSwitchAndShift<>(mutationProbability);
                 break;
-            case "TODO2": //TODO
+            case "partialinversion":
                 mutation = new MutationPartialInversion<>(mutationProbability);
                 break;
         }

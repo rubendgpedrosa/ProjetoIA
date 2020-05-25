@@ -101,7 +101,6 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public void setCellAgent(int line, int column) {
-        System.out.println("Move to: "+ line+","+column);
         this.matrix[lineAgent][columnAgent] = Properties.EMPTY;
         this.matrix[line][column] = Properties.AGENT;
         this.lineAgent = line;
