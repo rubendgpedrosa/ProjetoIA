@@ -2,10 +2,7 @@ package warehouse;
 
 import ga.IntVectorIndividual;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemForGA, WarehouseIndividual> {
 
@@ -45,7 +42,8 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
             //Gets the cell for the product requested through getRequest, using the number in the request position
             for (Pair pair : pairs) {
                 for (int i = 0; i < request.getRequest().length; i++) {
-                    Cell cell = productsCells.get(request.getRequest()[i] - 1);
+                    int shelfPos = getShelfPos(genome, request.getRequest()[i]);
+                    Cell cell = productsCells.get(shelfPos);
                     if (pair.getCell1() == warehouseAgent && pair.getCell2() == cell) {
                         fitness += pair.getValue();
                         break;
@@ -67,6 +65,8 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
                 }
             }
         }
+
+        System.out.println(fitness + " " + Arrays.toString(getGenome()));
 
         //Returns the fitness of the total distances summed up previously
         return fitness;
@@ -97,11 +97,10 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
             }
         }
         return 0;*/
-        System.out.println(list);
         for (int i = 0; i < genome.length; i++) {
             if(productsCells.get(i).getLine() == line && productsCells.get(i).getColumn() == column){
                 //return i+1;
-                return list.get(i);
+                return genome[i];
             }
         }
         return 0;

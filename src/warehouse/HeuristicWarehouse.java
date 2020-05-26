@@ -36,7 +36,7 @@ public class HeuristicWarehouse extends Heuristic<WarehouseProblemForSearch, War
       int dy = Math.abs(columnAgent - theDoorColumn);
 
       //Cost is not used since it's always 1
-      return (dx + dy) + (1 - 2 * 1) * Math.min(dx, dy);
+      return (dx + dy) + (1 - 2 /*   *1   */) * Math.min(dx, dy);
     }
 
     @Override
