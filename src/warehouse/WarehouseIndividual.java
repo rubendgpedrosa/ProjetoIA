@@ -2,7 +2,10 @@ package warehouse;
 
 import ga.IntVectorIndividual;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
 
 public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemForGA, WarehouseIndividual> {
 
@@ -10,10 +13,23 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     private LinkedList<Cell> productsCells = problem.getCellsWarehouseProducts();
     private Cell warehouseAgent = problem.getCellAgent();
     private Cell theDoor = problem.getTheDoor();
-    private LinkedList<Pair> pairs = WarehouseAgentSearch.getPairs();
+    private LinkedList<Pair> pairs = problem.getPairs();
+    private List<Integer> list = new ArrayList<>();
 
     public WarehouseIndividual(WarehouseProblemForGA problem, int size) {
         super(problem, size);
+        Random random = new Random();
+        int number;
+
+        for (int i = 0; i < genome.length; i++)
+        {
+            number = random.nextInt(genome.length)+1;
+            while(list.contains(number)){
+                number = random.nextInt(genome.length)+1;
+            }
+            this.setGene(i, number);
+            list.add(number);
+        }
     }
 
     public WarehouseIndividual(WarehouseIndividual original) {
@@ -64,14 +80,28 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     */
 
     public static int getShelfPos(int[] genome, int value) {
-        genome[value-1] = 1;
-        return value-1;
+        /*genome[value-1] = 1;
+        return value-1;*/
+        for (int i = 0; i < genome.length; i++) {
+            if (genome[i] == value){
+                return i;
+            }
+        }
+        return 0;
     }
 
     public int getProductInShelf(int line, int column){
-        for (int i = 0; i < productsCells.size(); i++) {
+        /*for (int i = 0; i < productsCells.size(); i++) {
             if(productsCells.get(i).getLine() == line && productsCells.get(i).getColumn() == column){
                 return i+1;
+            }
+        }
+        return 0;*/
+        System.out.println(list);
+        for (int i = 0; i < genome.length; i++) {
+            if(productsCells.get(i).getLine() == line && productsCells.get(i).getColumn() == column){
+                //return i+1;
+                return list.get(i);
             }
         }
         return 0;
@@ -82,13 +112,13 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         StringBuilder sb = new StringBuilder();
         sb.append("fitness: ");
         sb.append(fitness);
-        sb.append("\npath: ");
+        sb.append("\npath: \n");
         for (Request request : WarehouseAgentSearch.getRequests()) {
             sb.append(warehouseAgent+" ");
             for (int i = 0; i < request.getRequest().length; i++) {
                 sb.append(productsCells.get(request.getRequest()[i] - 1)).append(" ");
             }
-            sb.append(warehouseAgent + " | ");
+            sb.append(warehouseAgent + "\n");
         }
         return sb.toString();
     }
