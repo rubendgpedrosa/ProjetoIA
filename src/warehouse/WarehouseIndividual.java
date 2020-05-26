@@ -66,8 +66,6 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
             }
         }
 
-        System.out.println(fitness + " " + Arrays.toString(getGenome()));
-
         //Returns the fitness of the total distances summed up previously
         return fitness;
     }
@@ -115,9 +113,11 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         for (Request request : WarehouseAgentSearch.getRequests()) {
             sb.append(warehouseAgent+" ");
             for (int i = 0; i < request.getRequest().length; i++) {
-                sb.append(productsCells.get(request.getRequest()[i] - 1)).append(" ");
+                int shelfPos = getShelfPos(genome, request.getRequest()[i]);
+                Cell cell = productsCells.get(shelfPos);
+                sb.append(cell).append(" ");
             }
-            sb.append(warehouseAgent + "\n");
+            sb.append(warehouseAgent).append(" | ");
         }
         return sb.toString();
     }
