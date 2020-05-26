@@ -14,7 +14,6 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
 
     public WarehouseIndividual(WarehouseProblemForGA problem, int size) {
         super(problem, size);
-        //TODO criar genoma para cada request?
     }
 
     public WarehouseIndividual(WarehouseIndividual original) {
@@ -25,24 +24,34 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     public double computeFitness() {
         fitness = 0;
 
-        for (int i = 0; i < genome.length; i++) {
-            Cell cell = productsCells.get(i);
+        //Iterates through each request line
+        for (Request request : WarehouseAgentSearch.getRequests()) {
+            //Gets the cell for the product requested through getRequest, using the number in the request position
             for (Pair pair : pairs) {
-                if(pair.getCell1() == warehouseAgent && pair.getCell2() == cell){
+                for (int i = 0; i < request.getRequest().length; i++) {
+                    Cell cell = productsCells.get(request.getRequest()[i] - 1);
+                    if (pair.getCell1() == warehouseAgent && pair.getCell2() == cell) {
+                        fitness += pair.getValue();
+                        break;
+                    }
+                    //In case they are swapped
+                    if (pair.getCell1() == cell && pair.getCell2() == warehouseAgent) {
+                        fitness += pair.getValue();
+                        break;
+                    }
+                }
+            }
+            for (Pair pair : pairs) {
+                if (pair.getCell1() == warehouseAgent && pair.getCell2() == theDoor) {
                     fitness += pair.getValue();
                 }
-                //caso o par esteja ao contrário
-                if(pair.getCell1() == cell && pair.getCell2() == warehouseAgent){
+                //In case they are swapped again
+                if (pair.getCell2() == warehouseAgent && pair.getCell1() == theDoor) {
                     fitness += pair.getValue();
                 }
             }
         }
-        //par da porta
-        for (Pair pair : pairs) {
-            if(pair.getCell1() == warehouseAgent && pair.getCell2() == theDoor){
-                fitness += pair.getValue();
-            }
-        }
+
         //Returns the fitness of the total distances summed up previously
         return fitness;
     }
@@ -60,7 +69,6 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     }
 
     public int getProductInShelf(int line, int column){
-        //throw new UnsupportedOperationException("Not implemented yet.");
         for (int i = 0; i < productsCells.size(); i++) {
             if(productsCells.get(i).getLine() == line && productsCells.get(i).getColumn() == column){
                 return i+1;
@@ -75,9 +83,12 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         sb.append("fitness: ");
         sb.append(fitness);
         sb.append("\npath: ");
-        for (int i = 0; i < genome.length; i++) {
-            sb.append(genome[i]).append(" ");
-            //this method might require changes
+        for (Request request : WarehouseAgentSearch.getRequests()) {
+            sb.append(warehouseAgent+" ");
+            for (int i = 0; i < request.getRequest().length; i++) {
+                sb.append(productsCells.get(request.getRequest()[i] - 1)).append(" ");
+            }
+            sb.append(warehouseAgent + " | ");
         }
         return sb.toString();
     }

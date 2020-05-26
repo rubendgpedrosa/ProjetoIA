@@ -24,7 +24,6 @@ public class RecombinationPartialMapped<I extends IntVectorIndividual, P extends
         do {
             cut2 = GeneticAlgorithm.random.nextInt(ind1.getNumGenes());
         } while (cut1 == cut2);
-
         if (cut1 > cut2) {
             int aux = cut1;
             cut1 = cut2;

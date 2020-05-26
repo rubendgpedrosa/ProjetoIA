@@ -10,16 +10,18 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
     private LinkedList<Pair> pairs;
     private Cell cellAgent;
     private Cell theDoor;
+    private int size;
 
     public WarehouseProblemForGA(WarehouseAgentSearch agentSearch) {
         this.cellAgent = this.theDoor = WarehouseAgentSearch.getCellAgent();
         this.cellsWarehouseProducts = WarehouseAgentSearch.getShelves();
         this.pairs = agentSearch.getPairs();
+        this.size = cellsWarehouseProducts.size();
     }
 
     @Override
     public WarehouseIndividual getNewIndividual() {
-        return new WarehouseIndividual(this, this.cellsWarehouseProducts.size());
+        return new WarehouseIndividual(this, size);
     }
 
     @Override
