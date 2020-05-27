@@ -109,15 +109,9 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         StringBuilder sb = new StringBuilder();
         sb.append("fitness: ");
         sb.append(fitness);
-        sb.append("\npath: \n");
-        for (Request request : WarehouseAgentSearch.getRequests()) {
-            sb.append(warehouseAgent+" ");
-            for (int i = 0; i < request.getRequest().length; i++) {
-                int shelfPos = getShelfPos(genome, request.getRequest()[i]);
-                Cell cell = productsCells.get(shelfPos);
-                sb.append(cell).append(" ");
-            }
-            sb.append(warehouseAgent).append(" | ");
+        sb.append("\npath:");
+        for (int i = 0; i < genome.length; i++) {
+            sb.append(genome[i]).append(" ");
         }
         return sb.toString();
     }
