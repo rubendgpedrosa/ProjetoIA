@@ -2,7 +2,7 @@ Runs: 50
 
 Population size: 50, 100
 
-Max generations: 100, 500, 1000
+Max generations: 100, 500, 1000, 10000
 
 //--------------------------------
 
@@ -24,7 +24,7 @@ Mutation probability: 0.2, 0.4, 0.5, 0.8
 
 //--------------------------------
 
-Problem file: ./DataSets/puzzle_1.txt
+Problem file: ./DataSets/puzzle_10.txt
 
 //--------------------------------
 

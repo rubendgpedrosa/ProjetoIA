@@ -17,8 +17,9 @@ public class HeuristicWarehouse extends Heuristic<WarehouseProblemForSearch, War
         theDoorLine = state.getTheDoorLine();
         theDoorColumn = state.getTheDoorColumn();
 
-        return computeDistanceChebyshev();
-        //return computeDistanceManhattan();
+        //Chebyshev computes the distances diagonally as well
+        //return computeDistanceChebyshev();
+        return computeDistanceManhattan();
     }
 
     public int computeDistanceManhattan() {
