@@ -65,7 +65,14 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
                 }
             }
         }
-
+        System.out.print("genome: {");
+        for (int i = 0; i < genome.length; i++) {
+            System.out.print(genome[i]);
+            if(i+1 < genome.length){
+                System.out.print(", ");
+            }
+        }
+        System.out.print("}\n");
         //Returns the fitness of the total distances summed up previously
         return fitness;
     }

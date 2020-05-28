@@ -108,6 +108,6 @@ public class RecombinationOrder1<I extends IntVectorIndividual, P extends Proble
 
     @Override
     public String toString(){
-        return "ORDER1";
+        return "cx";
     }
 }
