@@ -1,2 +1,1 @@
 Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Average:	StdDev:
-50	100	Tournament(4)	cx	0.2	Insert	0.2		90.8	0.6928203230275511

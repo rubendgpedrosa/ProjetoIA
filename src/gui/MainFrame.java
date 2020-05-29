@@ -50,6 +50,7 @@ public class MainFrame extends JFrame implements GAListener {
     private XYSeries seriesBestIndividual;
     private XYSeries seriesAverage;
     private SwingWorker<Void, Void> worker;
+    private int numberOfGenerations;
 
     private PanelSimulation simulationPanel;
 
@@ -388,6 +389,7 @@ public class MainFrame extends JFrame implements GAListener {
         bestIndividualPanel.textArea.setText(source.getBestInRun().toString());
         seriesBestIndividual.add(source.getGeneration(), source.getBestInRun().getFitness());
         seriesAverage.add(source.getGeneration(), source.getAverageFitness());
+        numberOfGenerations++;
         if (worker.isCancelled()) {
             e.setStopped(true);
         }

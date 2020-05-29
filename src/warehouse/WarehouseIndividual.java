@@ -6,7 +6,6 @@ import java.util.*;
 
 public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemForGA, WarehouseIndividual> {
 
-    //TODO this class might require the definition of additional methods and/or attributes
     private LinkedList<Cell> productsCells = problem.getCellsWarehouseProducts();
     private Cell warehouseAgent = problem.getCellAgent();
     private Cell theDoor = problem.getTheDoor();
@@ -65,14 +64,6 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
                 }
             }
         }
-        System.out.print("genome: {");
-        for (int i = 0; i < genome.length; i++) {
-            System.out.print(genome[i]);
-            if(i+1 < genome.length){
-                System.out.print(", ");
-            }
-        }
-        System.out.print("}\n");
         //Returns the fitness of the total distances summed up previously
         return fitness;
     }
@@ -85,8 +76,6 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     */
 
     public static int getShelfPos(int[] genome, int value) {
-        /*genome[value-1] = 1;
-        return value-1;*/
         for (int i = 0; i < genome.length; i++) {
             if (genome[i] == value){
                 return i;
@@ -96,15 +85,8 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     }
 
     public int getProductInShelf(int line, int column){
-        /*for (int i = 0; i < productsCells.size(); i++) {
-            if(productsCells.get(i).getLine() == line && productsCells.get(i).getColumn() == column){
-                return i+1;
-            }
-        }
-        return 0;*/
         for (int i = 0; i < genome.length; i++) {
             if(productsCells.get(i).getLine() == line && productsCells.get(i).getColumn() == column){
-                //return i+1;
                 return genome[i];
             }
         }

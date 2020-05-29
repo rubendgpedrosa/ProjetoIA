@@ -1,2 +1,1 @@
 Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Fitness:
-50	100	Tournament(4)	cx	0.2	Insert	0.2		90.0

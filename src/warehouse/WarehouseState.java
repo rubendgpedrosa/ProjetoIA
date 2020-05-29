@@ -132,8 +132,10 @@ public class WarehouseState extends State implements Cloneable {
                 return Properties.COLORAGENT;
             case Properties.SHELF:
                 return Properties.COLORSHELF;
-            default:
+            case Properties.EMPTY:
                 return Properties.COLOREMPTY;
+            default:
+                return Properties.COLORSHELFPRODUCTCATCH;
         }
     }
 
