@@ -17,16 +17,21 @@ public RecombinationCycle(double probability) {
     public void recombine(I ind1, I ind2) {
         int idx = 0, item, aux;
 
-        //Adds index of genes to indexes untill all indexes are in the list
+        //Cycle through all genes
         do{
+            //Save index 0
             indexes.add(idx);
+            //Save individual's gene
             item = ind2.getGene(idx);
+            //Find the same gene value stored in the second individual and save it to idx
             idx = ind1.getIndexof(item);
         }while(!indexes.contains(idx));
 
-        //Swaps out the genes on both individuals using the index list as an auxiliary
+        //Run through the indexes
         for(int i = 0; i < indexes.size(); i++){
+            //Get the first gene stored in the index value stored
             aux = ind1.getGene(indexes.get(i));
+            //Set genes positions from the stored values and the second individual genes
             ind1.setGene(indexes.get(i),ind2.getGene(indexes.get(i)));
             ind2.setGene(indexes.get(i),aux);
         }

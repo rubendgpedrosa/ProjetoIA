@@ -24,6 +24,7 @@ public class PanelSimulation extends JPanel implements EnvironmentListener {
     final PanelInformation panelInformation = new PanelInformation();
     final JButton buttonSimulate = new JButton("Simulate Each Request");
     private int numRequest, numSteps;
+    private int[] visitedCells;
 
     SwingWorker worker;
 

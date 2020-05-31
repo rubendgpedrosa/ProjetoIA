@@ -22,19 +22,13 @@ public class MutationSwitchAndShift<I extends IntVectorIndividual, P extends Pro
             //make sure that the random numbers aren't equal to prevent the same resulting individual
         }while(random1 == random2);
 
-        //Set the minimum and maximum value so that we know where we start and end shifting
-        int minVal = Math.min(random1, random2);
-        int maxVal = Math.max(random1, random2);
+        //Save the gene in one of the positions
+        int auxgene = ind.getGene(random1);
+        //Set the gene saved as the other gene
+        ind.setGene(random1, ind.getGene(random2));
+        //Grab the saved gene and put it in the position of the second gene
+        ind.setGene(random2, auxgene);
 
-        //Save last gene so we don't lose it.
-        int geneAux = ind.getGene(maxVal);
-
-        for (int i = maxVal; i > minVal + 1; i--) {
-            ind.setGene(i, ind.getGene(i-1));
-        }
-
-        //Set gene saved on the new position
-        ind.setGene(minVal+1, geneAux);
     }
 
     @Override

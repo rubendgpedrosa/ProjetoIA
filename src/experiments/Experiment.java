@@ -35,7 +35,7 @@ public class Experiment <E extends ExperimentsFactory, P extends Problem>{
         for (int run = 0; run < numRuns; run++) {
             ga = factory.generateGAInstance(run + 1);
             ga.run(problem);
-            System.out.println((run+1) + " - fitness of: " + ga.getBestInRun().getFitness());
+            System.out.println("\n"+(run+1) + " - fitness of: " + ga.getBestInRun().getFitness());
         }
         fireExperimentEnded();
     }
