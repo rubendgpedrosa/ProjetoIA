@@ -11,7 +11,6 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     private Cell theDoor = problem.getTheDoor();
     private LinkedList<Pair> pairs = problem.getPairs();
     private List<Integer> list = new ArrayList<>();
-    private List<Integer> visitedElements = new ArrayList<>();
 
     public WarehouseIndividual(WarehouseProblemForGA problem, int size) {
         super(problem, size);

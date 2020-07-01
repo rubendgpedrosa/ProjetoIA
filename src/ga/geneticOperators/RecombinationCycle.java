@@ -41,6 +41,6 @@ public RecombinationCycle(double probability) {
 
     @Override
     public String toString(){
-        return "cx";
+        return "CX";
     }
 }
